@@ -12,7 +12,7 @@ const footer = () =>
 			<img alt="epl logo" src="/images/epl_logo.jpg"/>
 		</Link>
 		<div className={styles.right}>
-			@EPL ${footer} All rights reserved.
+			@EPL ${CURRENT_YEAR} All rights reserved.
 		</div>
   </div>
 )
