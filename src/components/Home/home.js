@@ -13,6 +13,7 @@ const Home = () => {
 						dots: false
 					}}
 			 />
+			 <NewsList/>
 		</div>
 	)
 }
