@@ -11,8 +11,8 @@ class NewsSlider extends Component {
 
   componentDidMount() {
 		axios
-		.get(`${URL}/article?_start=0&_end=3`)
-		.then((response) => {
+		.get(`${URL}/articles?_start=0&_end=3`)
+		.then(response => {
 			// console.log(response);
 			this.setState({
 				news: response.data
@@ -25,7 +25,7 @@ class NewsSlider extends Component {
     return( 
 				<SliderTemplates
 				data={this.state.news}
-				
+				type="featured"
 				/>
 		);
   }
