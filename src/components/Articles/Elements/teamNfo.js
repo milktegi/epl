@@ -3,10 +3,10 @@ import styles from '../articles.css';
 
 const teamNfo = props => (
 	<div className={styles.articlesTeamHeader}>
-		<div className={styles.left}>
+		<div className={styles.left}
 			style={{
 				background: `url('/images/teams/${props.team.logo}')`
-			}}
+			}}>
 		</div>
 		<div className={styles.right}>
 			<span>{props.team.city} {props.team.name}</span>
