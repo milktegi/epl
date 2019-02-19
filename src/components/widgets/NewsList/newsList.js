@@ -92,7 +92,7 @@ class NewsList extends Component {
           {this.renderNews(this.props.type)}
         </TransitionGroup>
 				<Button
-					type="loadmore"
+					type="loadMore"
 					loadMore={()=> this.loadMore()}
 					cta="더 많은 뉴스 보기"
 				/>
