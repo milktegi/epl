@@ -5,8 +5,8 @@ import axios from 'axios';
 import { URL } from '../../../../config';
 
 import styles from '../../articles.css';
-
-
+import Header from './header';
+import Body from './body';
 class NewsArticles extends Component {
 	
 	state = {
@@ -30,10 +30,18 @@ class NewsArticles extends Component {
 	
 	
 	render() {
-		console.log(this.state)
+
+		const { article, team } = this.state;
+
 		return(
-			<div>
-				article view
+			<div className={styles.article_wrapper}>
+				<Header
+					teamData={team[0]}
+					date={article.date}
+					author={article.author}
+				/>
+				<Body/>
+
 			</div>
 		)
 	}
