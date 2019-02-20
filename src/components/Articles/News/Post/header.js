@@ -11,7 +11,7 @@ const header = props => {
 		) : null;
 	}
 	
-  const postData = ( date, author ) => (
+  const postData = (date, author) => (
 		<PostData data={{date,author}}/>
 )
 	return(

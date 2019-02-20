@@ -3,7 +3,7 @@ import styles from '../articles.css';
 
 
 const teamNfo = (props) => (
-    <div className={styles.articleTeamHeader}>
+    <div className={styles.team_header}>
         <div className={styles.left}
             style={{
                 background:`url('/images/teams/${props.team.logo}')`

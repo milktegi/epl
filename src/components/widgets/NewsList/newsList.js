@@ -113,6 +113,7 @@ class NewsList extends Component {
               </Link>
             </CSSTransition>
         })
+        break;
       default:
         template = null;
     }

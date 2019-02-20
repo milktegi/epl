@@ -1,4 +1,4 @@
-.articleTeamHeader {
+.team_header {
 	border:1px solid #c5c5c5;
 	border-bottom: 0px;
 	background: #fff;
@@ -84,6 +84,3 @@
 	border: 0;
 }
 
-.relatedWrapper {
-	margin: 0 5px;
-}
