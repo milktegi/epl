@@ -38,10 +38,17 @@ class NewsList extends Component {
       .get(`${URL}/articles?_start=${start}&_end=${end}`)
       .then((response) => {
         this.setState({
-          items: [ ...this.state.items, ...response.data ]
+          items: [ ...this.state.items, ...response.data ],
+          start,
+          end
         });
       });
   };
+  
+  loadMore = () => {
+    let end = this.state.end + this.state.amount;
+    this.request(this.state.end, end)
+  }
 
   renderNews = (type) => {
     let template = null;
@@ -73,6 +80,39 @@ class NewsList extends Component {
           );
         });
         break;
+        case('cardMain'):
+        template = this.state.items.map((item, i)=>{
+            <CSSTransition
+							classNames={{
+									enter: styles. newsList_wrapper,
+									enterActive: styles.newsList_wrapper_enter
+							}}
+							timeout={500}
+							key={i}
+						>
+              <Link to={`/articles/${item.id}`}>
+                <div className={styles.flex_wrapper}>
+                  <div className={styles.left}
+                    style={{
+                      background: `url('/images/articles/${item.image}')`
+                    }}
+                  
+                  >
+                    <div>
+                      
+                    </div>
+                  </div>
+                  <div className={styles.right}>
+                  <TeamInfo
+										teams={this.state.teams}
+										teamId={item.team}
+										date={item.date}
+									/>
+                  </div>
+                </div>
+              </Link>
+            </CSSTransition>
+        })
       default:
         template = null;
     }
