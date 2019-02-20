@@ -1,13 +1,11 @@
 import React from 'react';
 
-
 const body = props => {
 	return(
 		<div>
-			body 
+			body
 		</div>
 	)
 }
-
 
 export default body;
