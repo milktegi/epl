@@ -38,7 +38,7 @@ class NewsList extends Component {
       .get(`${URL}/articles?_start=${start}&_end=${end}`)
       .then((response) => {
         this.setState({
-          items: [ ...this.state.items, ...response.data ],
+          items: [...this.state.items, ...response.data ],
           start,
           end
         });
@@ -84,7 +84,7 @@ class NewsList extends Component {
         template = this.state.items.map((item, i)=>{
             <CSSTransition
 							classNames={{
-									enter: styles. newsList_wrapper,
+									enter: styles.newsList_wrapper,
 									enterActive: styles.newsList_wrapper_enter
 							}}
 							timeout={500}
@@ -108,11 +108,13 @@ class NewsList extends Component {
 										teamId={item.team}
 										date={item.date}
 									/>
+                  <h2>{item.title}</h2>
                   </div>
                 </div>
               </Link>
             </CSSTransition>
         })
+        break;
       default:
         template = null;
     }
@@ -125,7 +127,7 @@ class NewsList extends Component {
   };
 
   render() {
-    console.log('팀팀팀',this.state.teams);
+    console.log(this.state.items)
     return (
       <div>
         <TransitionGroup component='div' className='list'>

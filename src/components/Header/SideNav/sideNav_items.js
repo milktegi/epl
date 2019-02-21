@@ -17,13 +17,13 @@ const SideNavItems = (props) => {
 			type: style.option,
 			icon: 'file-text-o',
 			text: '뉴스',
-			link: '/'
+			link: '/news'
 		},
 		{
 			type: style.option,
 			icon: 'play',
 			text: '동영상',
-			link: '/news'
+			link: '/videos'
 		},
 		{
 			type: style.option,
@@ -46,7 +46,7 @@ const showItems = () => {
 				<Link to={item.link}>
 				<FontAwesome
 				name={item.icon}
-				
+		
 				/>
 				{item.text}
 				</Link>
