@@ -23,7 +23,7 @@ const firebaseLooper = (snapshot) => {
 	snapshot.forEach((childreSnapshot)=>{
 		data.push({
 			...childreSnapshot.val(),
-			id: childSnapshot.key 
+			id: childreSnapshot.key 
 		})
 	})
 	return data;

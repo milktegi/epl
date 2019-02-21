@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { URL } from '../../../config';
-import { firebaseArticles } from '../../../firebase';
+import { firebaseArticles, firebaseLooper, firebase } from '../../../firebase';
 import SliderTemplates from './slider_templates';
 
 class NewsSlider extends Component {
