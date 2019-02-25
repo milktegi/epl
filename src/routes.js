@@ -11,13 +11,11 @@ import NewsMain from './components/Articles/News/Main/index'
 import VideoMain from './components/Articles/Videos/Main/index'
 import SignIn from './components/signin/signin';
 import Dashboard from './components/Dashboard/dashboard'
-
 class Routes extends Component {
-
+  
   render() {
-
     return (
-      <Layout user={this.props.user}>
+      <Layout>
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path="/news" exact component={NewsMain}/>
@@ -26,7 +24,7 @@ class Routes extends Component {
           <Route path="/videos/:id" exact component={VideoArticle}/>
           <Route path="/videos" exact component={VideoMain}/>
           <Route path="/signin" exact component={SignIn}/>
-           <Route path="/dashboard" exact component={Dashboard}/>
+          <Route path="/dashboard" exact component={Dashboard}/>
         </Switch>
       </Layout>
     );
